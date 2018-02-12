@@ -33,4 +33,7 @@ dependencies {
 
     //Design kütüphanesi coordinator layout, fab
     implementation 'com.android.support:design:26.1.0'
+
+    //bottomnavigation için ek kütüphane
+    compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 }
