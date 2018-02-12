@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--eklenen renkler-->
+    <color name="beyaz">#FFF</color>
+    <color name="gri">#bfbfbf</color>
 </resources>
