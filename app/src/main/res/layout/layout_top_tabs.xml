@@ -1,5 +1,5 @@
-
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -10,14 +10,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.v7.widget.Toolbar
+            <android.support.design.widget.TabLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/beyaz_gri_border_bottom"
+                app:tabGravity="fill"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
                 android:id="@+id/tabs">
 
 
-            </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.TabLayout>
 
         </android.support.design.widget.AppBarLayout>
 
