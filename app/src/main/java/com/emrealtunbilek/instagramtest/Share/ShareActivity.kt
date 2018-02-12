@@ -1,8 +1,9 @@
-package com.emrealtunbilek.instagramtest
+package com.emrealtunbilek.instagramtest.Share
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.emrealtunbilek.instagramtest.R
 import com.emrealtunbilek.instagramtest.utils.BottomNavigationViewHelper
 import kotlinx.android.synthetic.main.layout_bottom_navigation_view.*
 

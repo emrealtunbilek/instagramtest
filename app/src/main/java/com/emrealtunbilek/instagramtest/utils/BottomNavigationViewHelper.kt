@@ -7,6 +7,11 @@ import android.support.design.widget.BottomNavigationView
 import android.util.Log
 import android.view.MenuItem
 import com.emrealtunbilek.instagramtest.*
+import com.emrealtunbilek.instagramtest.Home.HomeActivity
+import com.emrealtunbilek.instagramtest.Likes.LikesActivity
+import com.emrealtunbilek.instagramtest.Profile.ProfileActivity
+import com.emrealtunbilek.instagramtest.Search.SearchActivity
+import com.emrealtunbilek.instagramtest.Share.ShareActivity
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 
 /**

@@ -1,17 +1,16 @@
-package com.emrealtunbilek.instagramtest
+package com.emrealtunbilek.instagramtest.Likes
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.emrealtunbilek.instagramtest.R
 import com.emrealtunbilek.instagramtest.utils.BottomNavigationViewHelper
-import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 import kotlinx.android.synthetic.main.layout_bottom_navigation_view.*
 
-class HomeActivity : AppCompatActivity() {
+class LikesActivity : AppCompatActivity() {
 
-   private val TAG = "HomeActivity";
-   private val ACTIVITY_NO = 0;
-
+    private val TAG = "LikesActivity";
+    private val ACTIVITY_NO = 3;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
