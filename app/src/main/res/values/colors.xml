@@ -6,5 +6,6 @@
 
     <!--eklenen renkler-->
     <color name="beyaz">#FFF</color>
+    <color name="siyah">#000</color>
     <color name="gri">#bfbfbf</color>
 </resources>
