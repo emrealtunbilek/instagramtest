@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/ic_house"
+        android:id="@+id/ic_home"
         android:icon="@drawable/ic_home"
         android:title="">
     </item>
@@ -15,19 +15,19 @@
     </item>
 
     <item
-        android:id="@+id/ic_circle"
+        android:id="@+id/ic_share"
         android:icon="@drawable/ic_circle"
         android:title="">
     </item>
 
     <item
-        android:id="@+id/ic_action_hearth"
+        android:id="@+id/ic_likes"
         android:icon="@drawable/ic_action_heart"
         android:title="">
     </item>
 
     <item
-        android:id="@+id/ic_android"
+        android:id="@+id/ic_user"
         android:icon="@drawable/ic_user"
         android:title="">
     </item>
