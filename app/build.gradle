@@ -36,4 +36,7 @@ dependencies {
 
     //bottomnavigation için ek kütüphane
     compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
+
+    //circle image view
+    compile 'de.hdodenhof:circleimageview:2.2.0'
 }
