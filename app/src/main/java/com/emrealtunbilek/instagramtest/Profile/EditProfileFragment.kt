@@ -9,6 +9,7 @@ import android.widget.ImageView
 import com.emrealtunbilek.instagramtest.R
 import com.emrealtunbilek.instagramtest.utils.UniversalImageLoader
 import com.nostra13.universalimageloader.core.ImageLoader
+import kotlinx.android.synthetic.main.snippet_top_editprofiletoolbar.*
 
 /**
  * Created by Emre on 13.02.2018.
@@ -16,21 +17,23 @@ import com.nostra13.universalimageloader.core.ImageLoader
 class EditProfileFragment : Fragment() {
 
     lateinit var profileImage: ImageView
+    lateinit var backArrow:ImageView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view = inflater!!.inflate(R.layout.fragment_editprofile, container, false)
         profileImage = view?.findViewById(R.id.profile_photo)!!
-
-        initImageLoader()
+        backArrow=view?.findViewById(R.id.backArrow)
 
         setProfileImage()
+
+        backArrow.setOnClickListener {
+            activity.finish()
+        }
+
         return view
     }
 
-    fun initImageLoader(){
-        var universalImageLoader=UniversalImageLoader(activity)
-        ImageLoader.getInstance().init(universalImageLoader.getConfig())
-    }
+
 
     fun setProfileImage() {
         var imageURL = "http://emrealtunbilek.com/wp-content/uploads/2016/10/apple-icon-72x72.png"

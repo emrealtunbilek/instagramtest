@@ -6,6 +6,8 @@ import android.util.Log
 import com.emrealtunbilek.instagramtest.R
 import com.emrealtunbilek.instagramtest.utils.BottomNavigationViewHelper
 import com.emrealtunbilek.instagramtest.utils.SectionsPagerAdapter
+import com.emrealtunbilek.instagramtest.utils.UniversalImageLoader
+import com.nostra13.universalimageloader.core.ImageLoader
 import kotlinx.android.synthetic.main.layout_bottom_navigation_view.*
 import kotlinx.android.synthetic.main.layout_center_viewpager.*
 import kotlinx.android.synthetic.main.layout_top_tabs.*
@@ -19,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
+        initImageLoader()
         setupBottomNavigationView()
 
         setupViewPager()
@@ -51,5 +53,10 @@ class HomeActivity : AppCompatActivity() {
         tabs.getTabAt(2)?.setIcon(R.drawable.ic_arrow)
 
         viewPager.setCurrentItem(1)
+    }
+
+    fun initImageLoader(){
+        var universalImageLoader= UniversalImageLoader(applicationContext)
+        ImageLoader.getInstance().init(universalImageLoader.getConfig())
     }
 }
