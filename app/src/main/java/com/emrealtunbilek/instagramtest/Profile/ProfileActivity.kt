@@ -20,6 +20,7 @@ class ProfileActivity : AppCompatActivity() {
 
     private val TAG = "ProfileActivity";
     private val ACTIVITY_NO = 4;
+    private val NUM_GRID_COLUMS=5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +62,7 @@ class ProfileActivity : AppCompatActivity() {
     private fun tempGridSetup() {
         val imgURLs = ArrayList<String>()
         imgURLs.add("https://img.youtube.com/vi/twZggnNbFqo/maxresdefault.jpg")
-        imgURLs.add("http://emrealtunbilek.com/wp-content/uploads/2016/10/apple-icon-72x72.png")
+        imgURLs.add("http://akillitelefon.com/wp-content/uploads/2017/01/android-app-tips.png")
         imgURLs.add("https://c1.staticflickr.com/5/4276/34102458063_7be616b993_o.jpg")
         imgURLs.add("https://www.indir.vip/wp-content/uploads/2016/05/android.jpg")
         imgURLs.add("http://images.indianexpress.com/2018/01/android-main.jpg")
@@ -72,7 +73,7 @@ class ProfileActivity : AppCompatActivity() {
         imgURLs.add("http://www.sharingame.org/media/url3.jpg")
         imgURLs.add("http://www.androidwallpper.com/wp-content/uploads/2017/01/blue-machine-android-wallpaper-for-mobile.jpg")
         imgURLs.add("https://img.youtube.com/vi/twZggnNbFqo/maxresdefault.jpg")
-        imgURLs.add("http://emrealtunbilek.com/wp-content/uploads/2016/10/apple-icon-72x72.png")
+        imgURLs.add("http://akillitelefon.com/wp-content/uploads/2017/01/android-app-tips.png")
         imgURLs.add("https://c1.staticflickr.com/5/4276/34102458063_7be616b993_o.jpg")
         imgURLs.add("https://www.indir.vip/wp-content/uploads/2016/05/android.jpg")
         imgURLs.add("http://images.indianexpress.com/2018/01/android-main.jpg")
@@ -83,7 +84,7 @@ class ProfileActivity : AppCompatActivity() {
         imgURLs.add("http://www.sharingame.org/media/url3.jpg")
         imgURLs.add("http://www.androidwallpper.com/wp-content/uploads/2017/01/blue-machine-android-wallpaper-for-mobile.jpg")
         imgURLs.add("https://img.youtube.com/vi/twZggnNbFqo/maxresdefault.jpg")
-        imgURLs.add("http://emrealtunbilek.com/wp-content/uploads/2016/10/apple-icon-72x72.png")
+        imgURLs.add("http://akillitelefon.com/wp-content/uploads/2017/01/android-app-tips.png")
         imgURLs.add("https://c1.staticflickr.com/5/4276/34102458063_7be616b993_o.jpg")
         imgURLs.add("https://www.indir.vip/wp-content/uploads/2016/05/android.jpg")
         imgURLs.add("http://images.indianexpress.com/2018/01/android-main.jpg")
@@ -93,12 +94,32 @@ class ProfileActivity : AppCompatActivity() {
         imgURLs.add("http://makeitappeu.s3.amazonaws.com/wp-content/uploads/2015/06/15112640/Android-HD-Desktop-Wallpaper.jpg")
         imgURLs.add("http://www.sharingame.org/media/url3.jpg")
         imgURLs.add("http://www.androidwallpper.com/wp-content/uploads/2017/01/blue-machine-android-wallpaper-for-mobile.jpg")
+        imgURLs.add("https://img.youtube.com/vi/twZggnNbFqo/maxresdefault.jpg")
+        imgURLs.add("http://akillitelefon.com/wp-content/uploads/2017/01/android-app-tips.png")
+        imgURLs.add("https://c1.staticflickr.com/5/4276/34102458063_7be616b993_o.jpg")
+        imgURLs.add("https://www.indir.vip/wp-content/uploads/2016/05/android.jpg")
+        imgURLs.add("http://images.indianexpress.com/2018/01/android-main.jpg")
+        imgURLs.add("https://voipfreak.net/wp-content/uploads/2014/01/Android-Applications.jpg")
+        imgURLs.add("https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/82e2630d-ede6-4f7b-ba9a-e7b8a043f7e2/1.jpg")
+        imgURLs.add("http://www.teknolopi.com/wp-content/uploads/2015/06/kaybolan-akilli-telefon-nasil-bulunur.jpg")
+        imgURLs.add("http://makeitappeu.s3.amazonaws.com/wp-content/uploads/2015/06/15112640/Android-HD-Desktop-Wallpaper.jpg")
+        imgURLs.add("http://www.sharingame.org/media/url3.jpg")
+        imgURLs.add("http://www.androidwallpper.com/wp-content/uploads/2017/01/blue-machine-android-wallpaper-for-mobile.jpg")
+        imgURLs.add("https://img.youtube.com/vi/twZggnNbFqo/maxresdefault.jpg")
+        imgURLs.add("http://akillitelefon.com/wp-content/uploads/2017/01/android-app-tips.png")
+        imgURLs.add("https://c1.staticflickr.com/5/4276/34102458063_7be616b993_o.jpg")
+
 
 
         setupImageGrid(imgURLs)
     }
 
     fun setupImageGrid(imgURLs:ArrayList<String>){
+
+        var gridWidth=resources.displayMetrics.widthPixels
+        var resimGenislik= gridWidth / NUM_GRID_COLUMS
+        gridView.columnWidth=resimGenislik
+
         var myadapter=GridImageAdapter(this,R.layout.tek_satir_gridview, imgURLs)
         gridView.adapter=myadapter
     }

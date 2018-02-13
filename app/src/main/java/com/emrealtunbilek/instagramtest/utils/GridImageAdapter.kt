@@ -24,6 +24,7 @@ class GridImageAdapter(var gelenContext: Context, resource: Int, var arrayList: 
     private val TAG = "GridImageAdapter";
     var kontrol=0
 
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
         var tek_satir_view = convertView

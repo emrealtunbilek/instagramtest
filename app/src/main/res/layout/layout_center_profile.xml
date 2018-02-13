@@ -79,29 +79,28 @@
                     android:id="@+id/display_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mitch"
+                    android:text="Emre"
                     android:textColor="@color/siyah"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="I live in Vancouver, BC"
+                    android:text="Udemy instructor"
                     android:textColor="@color/siyah"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/website"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="https://codingwithmitch.com"
+                    android:text="https://emrealtunbilek.com"
                     android:textColor="@color/link_mavi"
-                    android:textSize="16sp"
-                    />
+                    android:textSize="16sp" />
 
 
             </LinearLayout>
@@ -122,8 +121,6 @@
                     android:numColumns="3"
                     android:stretchMode="columnWidth"
                     android:verticalSpacing="1dp">
-
-
                 </GridView>
 
 
