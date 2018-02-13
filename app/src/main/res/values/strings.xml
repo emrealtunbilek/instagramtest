@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">InstagramTest</string>
+    <string-array name="edit_profile_options">
+        <item>Profil düzenle</item>
+        <item>Çıkış Yap</item>
+    </string-array>
 </resources>
