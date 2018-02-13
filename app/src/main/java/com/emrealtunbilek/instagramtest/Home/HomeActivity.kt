@@ -2,10 +2,10 @@ package com.emrealtunbilek.instagramtest.Home
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.view.ViewPager
 import android.util.Log
 import com.emrealtunbilek.instagramtest.R
 import com.emrealtunbilek.instagramtest.utils.BottomNavigationViewHelper
+import com.emrealtunbilek.instagramtest.utils.SectionsPagerAdapter
 import kotlinx.android.synthetic.main.layout_bottom_navigation_view.*
 import kotlinx.android.synthetic.main.layout_center_viewpager.*
 import kotlinx.android.synthetic.main.layout_top_tabs.*
@@ -37,7 +37,7 @@ class HomeActivity : AppCompatActivity() {
 
 
     fun setupViewPager(){
-        var sectionViewPagerAdapter=SectionsPagerAdapter(supportFragmentManager)
+        var sectionViewPagerAdapter= SectionsPagerAdapter(supportFragmentManager)
         sectionViewPagerAdapter.addFragment(CameraFragment())
         sectionViewPagerAdapter.addFragment(HomeFragment())
         sectionViewPagerAdapter.addFragment(MessageFragment())
