@@ -1,5 +1,6 @@
 package com.emrealtunbilek.instagramtest.Profile
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
@@ -36,23 +37,11 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     fun setupToolbar(){
-        profileToolbar.setOnMenuItemClickListener(object : Toolbar.OnMenuItemClickListener{
-            override fun onMenuItemClick(item: MenuItem?): Boolean {
-                when(item?.itemId){
-                    R.id.profileMenu -> {
-                        return true
-                    }
-                }
-                return false
-            }
-
-        })
-
+        profileMenu.setOnClickListener {
+            var i=Intent(this@ProfileActivity, AccountSettingsActivity::class.java)
+            startActivity(i)
+        }
         setSupportActionBar(profileToolbar)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.profile_menu,menu)
-        return true
-    }
 }
