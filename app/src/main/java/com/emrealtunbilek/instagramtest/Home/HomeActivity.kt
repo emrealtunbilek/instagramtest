@@ -30,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         setupFirebaseAuth()
+        mAuth?.signOut()
 
         initImageLoader()
         setupBottomNavigationView()
@@ -98,6 +99,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         mAuth?.addAuthStateListener(mAuthListener!!)
+        checkCurrentUser(mAuth?.currentUser)
     }
 
     override fun onStop() {
