@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.emrealtunbilek.instagramtest">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +22,9 @@
         <activity android:name=".Likes.LikesActivity" />
         <activity android:name=".Profile.ProfileActivity" />
         <activity android:name=".Share.ShareActivity" />
-        <activity android:name=".Profile.AccountSettingsActivity"></activity>
+        <activity android:name=".Profile.AccountSettingsActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Login.RegisterActivity"></activity>
     </application>
 
 </manifest>
