@@ -87,13 +87,14 @@
         android:layout_centerInParent="true"/>
 
     <TextView
+        android:id="@+id/tvlutfenbekleyin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/progressBar"
+        android:layout_alignLeft="@+id/progressBar"
+        android:layout_alignRight="@+id/progressBar"
         android:text="Please wait..."
         android:textColor="@color/siyah"
-        android:textSize="20sp"
-        android:layout_alignBottom="@+id/progressBar"
-        android:layout_alignRight="@+id/progressBar"
-        android:layout_alignLeft="@+id/progressBar"/>
+        android:textSize="20sp" />
 
 </RelativeLayout>

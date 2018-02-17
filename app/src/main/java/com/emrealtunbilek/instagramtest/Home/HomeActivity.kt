@@ -39,7 +39,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
-    fun setupBottomNavigationView() {
+    private fun setupBottomNavigationView() {
         Log.d(TAG, "setupBottomNavigationView: bottom navigation ayarlanıyor");
         BottomNavigationViewHelper.setupBottomNavigationView(bottomNavViewBar)
         BottomNavigationViewHelper.enableNavigation(this, bottomNavViewBar)
@@ -49,7 +49,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
-    fun setupViewPager() {
+    private fun setupViewPager() {
         var sectionViewPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
         sectionViewPagerAdapter.addFragment(CameraFragment())
         sectionViewPagerAdapter.addFragment(HomeFragment())
@@ -74,17 +74,14 @@ class HomeActivity : AppCompatActivity() {
     fun setupFirebaseAuth() {
 
         mAuth = FirebaseAuth.getInstance()
-        mAuthListener = object : FirebaseAuth.AuthStateListener {
-            override fun onAuthStateChanged(p0: FirebaseAuth) {
+        mAuthListener = FirebaseAuth.AuthStateListener { p0 ->
+            var user = p0?.currentUser
+            checkCurrentUser(user)
 
-                var user = p0?.currentUser
-                checkCurrentUser(user)
-
-                if (user != null) {
-                    Log.d(TAG, "onAuthStateChanged: Kullanıcı bağlı:" + user.uid);
-                } else {
-                    Log.d(TAG, "onAuthStateChanged: Kullanıcı bağlı değil");
-                }
+            if (user != null) {
+                Log.d(TAG, "onAuthStateChanged: Kullanıcı bağlı:" + user.uid);
+            } else {
+                Log.d(TAG, "onAuthStateChanged: Kullanıcı bağlı değil");
             }
         }
     }
